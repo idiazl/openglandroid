@@ -114,7 +114,7 @@ public class MainRenderer implements GLSurfaceView.Renderer, SurfaceTexture.OnFr
         mGLInit = true;
     }
 
-    public void onDrawFrame ( GL10 unused ) {
+    public void onDrawFrame ( GL10 unused) {
         if ( !mGLInit ) return;
         GLES20.glClear(GLES20.GL_COLOR_BUFFER_BIT);
 

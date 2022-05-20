@@ -9,6 +9,7 @@ import android.opengl.GLSurfaceView.Renderer;
 public class GLClearRenderer implements Renderer {
 
     private Cube mCube = new Cube();
+    private Piramide pyramid = new Piramide();
     private float mCubeRotation;
 
     public void onDrawFrame( GL10 gl ) {
@@ -24,12 +25,12 @@ public class GLClearRenderer implements Renderer {
         gl.glRotatef(mCubeRotation, 1.0f, 1.0f, 1.0f);
 
         mCube.draw(gl);
+        pyramid.draw(gl);
+
 
         gl.glLoadIdentity();
 
         mCubeRotation -= 0.15f;
-
-
     }
 
     public void onSurfaceChanged( GL10 gl, int width, int height ) {
